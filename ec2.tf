@@ -1,9 +1,3 @@
-variable "instancias" {
-  description = "Nombre de las instancias"
-  type        = list(string)
-  default     = ["apache"]
-
-}
 
 resource "aws_instance" "public_instance" {
   for_each               = toset(var.instancias)

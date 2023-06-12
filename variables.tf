@@ -35,6 +35,13 @@ variable "ec2_specs" {
 
 }
 
+variable "instancias" {
+  description = "Nombre de las instancias"
+  type        = list(string)
+  default     = ["apache"]
+
+}
+
 variable "enable_monitoring" {
   description = "Habilita el despliegue de un servidor de monitoreo"
   type        = number
